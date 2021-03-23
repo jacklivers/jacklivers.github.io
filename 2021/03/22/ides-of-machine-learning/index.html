@@ -150,6 +150,8 @@
 <p>The machine learning algorithm I decided to use to predict the bracket this year is called random forest; while I know “random forest” sounds like the subject of a psychedelic rock song, it isn’t in this case.</p>
 <p>A random forest is a collection of decision trees, each decision tree has its output; the random forest averages all of those outputs and spits out the prediction.</p>
 <p>The reason I chose a random forest was that it doesn’t take a long time to run and I felt it most the most effective option that would work on my computer.</p>
+<div id="how-i-did-it" class="section level3">
+<h3>How I Did It</h3>
 <p>One of the first things I need to do is split my data into testing and training sets.</p>
 <pre class="r"><code>superdata_split &lt;- initial_split(superdata, prop = .8)
 superdata_train &lt;- training(superdata_split)
@@ -227,6 +229,9 @@ summary(superdata_recipe)</code></pre>
 ## #   Rolling_Mean_EFG &lt;dbl&gt;, TeamSRS &lt;dbl&gt;,
 ## #   Opponent_Rolling_Mean_Possessions &lt;dbl&gt;, Opponent_Rolling_Mean_PPP &lt;dbl&gt;,
 ## #   Opponent_Rolling_Mean_EFG &lt;dbl&gt;, OpponentSRS &lt;dbl&gt;</code></pre>
+</div>
+<div id="metrics" class="section level3">
+<h3>Metrics</h3>
 <p>I’m going to skip ahead a tad to look at the metrics, basically how accurate is my model. The accuracy metric takes several predictions that are correct when compared to known results. Kap is a representation of accuracy based solely on chance.</p>
 <p>We’ll first look at training data, which is how good the model does with the data it already has.</p>
 <pre class="r"><code>metrics(sdtrainpredict, Outcome, .pred_class)</code></pre>
@@ -280,8 +285,10 @@ summary(superdata_recipe)</code></pre>
 <p>Wow, so there’s quite the difference in accuracy between known data and unknown data. Though this does make sense you’d like to see better than that around 72% accuracy and a 43% kap (remember kap is based solely on chance) when we’re trying to predict the future.</p>
 <p>Maybe I can refer back to these numbers when evaluating how the model did.</p>
 <p>This is where the fun begins. You’ll get to see some, but not all of my predictions. Why not all? Because that’s many lines of code and the equivalent of reading a blog about someone else’s fantasy team.</p>
-<p>So we’ll start with the Final Four where I have #2 Ohio State from the South Region facing #6 San Diego State from the Midwest Region and #3 Kansas from the West Region facing #10 Maryland from the East Region.
-### Final Four</p>
+<p>So we’ll start with the Final Four where I have #2 Ohio State from the South Region facing #6 San Diego State from the Midwest Region and #3 Kansas from the West Region facing #10 Maryland from the East Region.</p>
+</div>
+<div id="final-four" class="section level3">
+<h3>Final Four</h3>
 <pre class="r"><code>finalfour &lt;- tibble(
   Team=&quot;Ohio State&quot;,
   Opponent=&quot;San Diego State&quot;,
@@ -305,8 +312,10 @@ summary(superdata_recipe)</code></pre>
 ## #   Season &lt;chr&gt;, Rolling_Mean_Possessions &lt;dbl&gt;, Rolling_Mean_PPP &lt;dbl&gt;,
 ## #   Rolling_Mean_EFG &lt;dbl&gt;, TeamSRS &lt;dbl&gt;, Date &lt;date&gt;</code></pre>
 <p>After all that it’s the Western Regional Champion #3 Kansas Jayhawks vs the Southern Regional Champion #6 San Diego State Aztecs.</p>
-<p>I wonder, when it’s all said and done, if this ship will need to be hauled from landlocked Kansas to set sail, or will San Diego State be able to just plop it onto the Pacific Ocean?
-### Championship</p>
+<p>I wonder, when it’s all said and done, if this ship will need to be hauled from landlocked Kansas to set sail, or will San Diego State be able to just plop it onto the Pacific Ocean?</p>
+</div>
+<div id="championship" class="section level3">
+<h3>Championship</h3>
 <pre class="r"><code>ship &lt;- tibble(
   Team=&quot;Kansas&quot;,
   Opponent=&quot;San Diego State&quot;,
@@ -326,6 +335,7 @@ summary(superdata_recipe)</code></pre>
 ## #   Rolling_Mean_EFG &lt;dbl&gt;, TeamSRS &lt;dbl&gt;, Date &lt;date&gt;</code></pre>
 <p>It turns out it will be the Kansas Jayhawks getting to haul their ’ship to the nearest body of water to set sail, as they are your 2021 NCAA Men’s Basketball Champions.</p>
 <p>To clear up any possible confusion of how the random forest works, if you look at the code, .pred_W is the predicted chance that the Team will win. So an average of around 69% of the trees in the random forest had Kansas beating San Diego State.</p>
+</div>
 
     </div>
   </article>
