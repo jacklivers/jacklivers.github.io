@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project follow-up on Jack Livers&#39; Github Site</title>
+    <link>/tags/project-follow-up/</link>
+    <description>Recent content in project follow-up on Jack Livers&#39; Github Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/project-follow-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If you ain&#39;t first, you&#39;re [dead] last.</title>
+      <link>/2021/04/06/if-you-ain-t-first-you-re-dead-last/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/04/06/if-you-ain-t-first-you-re-dead-last/</guid>
+      <description>March Madness has come and gone, Jesus “is risen”, and fans are back in MLB stadiums. As much as I’d like to talk about baseball, I have to talk about my March Madness machine learning bracket (from the Ides of Machine Learning blog post) did.
+If you couldn’t tell from the title, I finished dead last out of the entire group that took part in this, that’s 17th place.</description>
+    </item>
+    
+  </channel>
+</rss>

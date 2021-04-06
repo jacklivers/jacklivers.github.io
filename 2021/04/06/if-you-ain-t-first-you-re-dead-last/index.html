@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<title>If you ain&#39;t first, you&#39;re [dead] last. - Jack Livers&#39; Github Site</title>
+<meta property="og:title" content="If you ain&#39;t first, you&#39;re [dead] last. - Jack Livers&#39; Github Site">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/jacklivers/jacklivers.github.io">GitHub</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">7 min read</span>
+    
+
+    <h1 class="article-title">If you ain&#39;t first, you&#39;re [dead] last.</h1>
+
+    
+    <span class="article-date">2021-04-06</span>
+    
+
+    <div class="article-content">
+      
+<script src="/2021/04/06/if-you-ain-t-first-you-re-dead-last/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>March Madness has come and gone, Jesus “is risen”, and fans are back in MLB stadiums. As much as I’d like to talk about baseball, I have to talk about my March Madness machine learning bracket (from the Ides of Machine Learning blog post) did.</p>
+<p>If you couldn’t tell from the title, I finished dead last out of the entire group that took part in this, that’s 17th place. It’s important to know that I have no loyalty to any basketball team. The only time I even watch basketball is maybe the last minutes of one of these games when a team is about to get upset. While the fact that I had Kansas beating San Diego State in the championship might already say everything about where I went wrong, I’m going to go through my first-round airballs anyway.</p>
+<div id="west" class="section level3">
+<h3>West</h3>
+<p>This was my, and probably everyone’s, best round of the entire tournament because there was only one upset. That upset was #13 Ohio beating #4 Virginia; my model was 74% sure Virginia was going to win this game. I feel a big reason my model missed so much on this game is that Ohio shot 7% better from the field, 4.6% better behind the arc, they also had 9 more rebounds which my model doesn’t account for. My model also doesn’t account for free throws, Ohio made 93%; Virginia made 80%. Ohio also had two more assists than Virginia. Luckily I didn’t have Virginia making it past Creighton in round two.</p>
+</div>
+<div id="east" class="section level3">
+<h3>East</h3>
+<p>This was my second-best round of the tournament. Many people probably had #3 Texas beating #14 Abilene Christian, my model was 76% sure Texas would win this game. Texas outshot Abilene Christian by 15.1% from the field and 18.3% behind the arc, Abilene Christian barely outshot Texas in free throws making 1.5% more of them. Abilene Christian did however out rebound, steal, and had 12 fewer turnovers than Texas, all things my model didn’t account for. Fortunately Abilene Christian lost in the next round to my other miss of the round.</p>
+<p>My model had #6 BYU winning in a tossup against #11 UCLA, the model was 53% sure BYU would win; since I didn’t know better I stuck to my model. To keep it short, UCLA shot 24.5% better from behind the arc, something my model had some incorporation with; had five more assists, and six fewer turnovers than BYU. The latter are things my model didn’t account for. UCLA made it to the final four where I had Maryland who lost to Alabama in round 2 and Kansas who got demolished by USC in round two as well. While all that sounds bad, it gets worse.</p>
+</div>
+<div id="south" class="section level3">
+<h3>South</h3>
+<p>In the south I missed three picks; when it’s all said and done, I’ll let you decide whether my South or Midwest was worse. There were two upsets I didn’t anticipate and an upset that didn’t come to fruition. My model had #4 Purdue beating #13 North Texas; it was 73% sure Purdue would win. The big reason I missed here is that North Texas outshot Purdue in every category with the biggest difference being in free throws with North Texas shooting 15.4% better.</p>
+<p>The next game I missed was the anticipated upset of #11 Utah State over #6 Texas Tech. I’d say there was some toss-up potential here with Utah State having a 58% chance at winning. Looking at what went wrong, the biggest thing that jumps off the page in this game is turnovers. Utah State turned the ball over 22 times compared to only 8 by Texas Tech. By that logic, one might assume I should look at turnovers themselves, but I think points off the turnover would be the better statistic.</p>
+<p>The last game I missed in this region got the hanging rope out, that was #2 Ohio State losing to #15 Oral Roberts. My model was 88% confident that Ohio State would win, probably the same confidence sabermetrics had in the A’s winning the 2002 World Series. Ohio State was better shooting from the field, but they were lacking from behind the arc and so from the free-throw line. Oral Roberts shot 27.8% better from the free-throw line. Ohio State also turned the ball over 10 more times than Oral Roberts who had eight more steals than Ohio State. Why did this game get the hanging rope out? Because I had Ohio State going all the way to the Final Four, you’ll see what tied the noose on that rope in the next round.</p>
+</div>
+<div id="midwest" class="section level3">
+<h3>Midwest</h3>
+<p>I missed three picks in the midwest as well, the first being #8 Loyola Chicago vs #9 Georgia Tech. The model was 64% sure that Georgia Tech would upset Loyola, while I’m not sure how correlative Sister Jean’s prayers are to wins, Loyola outshot Georgia Tech in three-pointers and free throws. Loyola also had 13 more total rebounds than Georgia Tech, while some might think defensive rebounds might be more important than offensive ones, it’d be interesting to see how many points come from those rebounds regardless of whether they are defensive or offensive.</p>
+<p>The next miss I had was the #12 Oregon State’s upset over #5 Tennessee, a relative tossup due to the model giving Tennessee a 57% chance of winning. Tennessee was atrocious shooting everywhere besides the free-throw line which is what I’d chalk this game up to on the surface.</p>
+<p>The last miss is what tied the noose on the hanging rope that Oral Roberts gave us with Ohio State’s money. I had #6 San Diego State beating #11 Syracuse with 65% confidence. What went wrong? San Diego State COULD NOT SHOOT. 35.8% from the floor, 27.5% from behind the arc, and 42.9% from the free-throw line, whereas Syracuse was 55.3% from the floor, 55.6% from downtown, and 84.6% from the free-throw line. That’s all you need to know in this one.</p>
+</div>
+<div id="doa" class="section level3">
+<h3>DOA</h3>
+<p>Okay, so the Ohio State and San Diego State losses got the hanging rope out and tied the noose because I had them in the final four.</p>
+<p>The game that put my neck in the previously tied noose was #10 Maryland vs #2 Alabama in the second round. I had Maryland going all the way to the final four with a 59% chance of beating Alabama. What jumps off the page here is Maryland’s 42.9% clip from the free-throw line vs Alabama’s 100%, as well as Alabama’s 40 rebounds compared to Maryland’s 19; more interesting would be how many points came from those rebounds.</p>
+<p>The game that pushed the stool below my feet over and sent me a swingin’ was #3 Kansas vs # 6 USC. The model gave Kansas a 69% chance of winning and they got DOMINATED. Kansas had a 75% free throw percentage compared to USC’s 61.1, but they [Kansas] only shot 29% from the floor and 24% from downtown. USC shot over 50% in all shooting categories. The only other page jumper here is USC’s 43 rebounds compared to Kansas’s 27.</p>
+<p>In the end, I had Kansas beating San Diego State in the championship, but I was gone before the Sweet 16.</p>
+</div>
+<div id="final-thoughts" class="section level3">
+<h3>Final Thoughts</h3>
+<p>I think I mainly went wrong by not considering enough factors. The main stat I used besides possession metrics was efficient field goal percentage, but that doesn’t account for free throws. I also didn’t do anything involving rebounds or turnovers or the points that may come from those.</p>
+<p>I think I maybe would’ve done better on my own strictly because to 1’s were in the championship and I would’ve gone pretty chalky without my model. I do like that my model made picks with some statistical backing, though the result was 390 points and in the 10th percentile. All things considered, it was fun and more interesting than just filling out a bracket willy nilly.</p>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+
